@@ -4,7 +4,8 @@
   "info": {
     "singularName": "curso",
     "pluralName": "cursos",
-    "displayName": "Curso"
+    "displayName": "Curso",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,6 +25,17 @@
     },
     "ano": {
       "type": "integer"
+    },
+    "estudiantes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::estudiante.estudiante",
+      "mappedBy": "curso"
+    },
+    "preceptor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::preceptor.preceptor"
     }
   }
 }

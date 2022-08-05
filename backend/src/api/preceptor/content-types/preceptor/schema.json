@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "preceptors",
+  "info": {
+    "singularName": "preceptor",
+    "pluralName": "preceptors",
+    "displayName": "Preceptor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "cursos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::curso.curso"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

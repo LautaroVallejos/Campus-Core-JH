@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estudiantes",
+  "info": {
+    "singularName": "estudiante",
+    "pluralName": "estudiantes",
+    "displayName": "Estudiante"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "edad": {
+      "type": "integer"
+    },
+    "email": {
+      "type": "email"
+    },
+    "contactoTutor": {
+      "type": "biginteger"
+    },
+    "nroObraSocial": {
+      "type": "biginteger"
+    },
+    "dni": {
+      "type": "biginteger"
+    },
+    "curso": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::curso.curso",
+      "inversedBy": "estudiantes"
+    }
+  }
+}
