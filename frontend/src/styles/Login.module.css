@@ -1,0 +1,180 @@
+/*#### ANIMATION STYES ####*/
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+.main_container {
+  position:relative;
+ 
+  background: linear-gradient(60deg, rgb(37,50,162) 0%, rgb(6, 77, 233) 100%);
+  color:white;
+}
+
+/* .logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+} */
+
+.inner_header_flex{
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  
+}
+
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+/* .content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+} */
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+}
+@media (max-width:1142px){
+
+  .animacion{
+    margin-top: 10em;
+  }
+
+}
+
+/*#### FORM STYLES ####*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&display=swap');
+
+.formulario{
+    background-color: pink;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 70%;
+    border: 1px;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+   
+
+}
+
+.form{
+    background-color:rgba(4, 66, 116, 0.881);
+    border-radius: 10px;
+    box-shadow: 7px 8px 10px 4px rgba(0,0,0,0.76);
+-webkit-box-shadow: 7px 8px 10px 4px rgba(0,0,0,0.76);
+-moz-box-shadow: 7px 8px 10px 4px rgba(0,0,0,0.76);
+    width:25em;
+    height: 25em;
+    margin-left: 10em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.input{
+  
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    
+}
+
+.primero{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-family: 'Noto Serif', serif;
+    font-size: 2em;
+}
+
+.label, .input {
+    font-size: 1.5em;
+    text-align: center;
+    
+}
+
+.label{
+    
+    font-size: 1.5em;
+}
+
+#boto{
+    width: 50%;
+    margin: auto;
+    margin-top: 25px;    
+}
+
+
+@media (max-width:1142px){
+
+   /* .formulario{
+margin-top: 400px;
+   } */
+   .form{
+    margin-top: 30px;
+   }
+  
+  }
