@@ -2,22 +2,23 @@ version: "3.9"
 services:
   campus-frontend:
     build: 
-      context: ./frontend/
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
-      - ./frontend/src/:/usr/src/app/frontend/src/
+      - ./frontend/src/:/usr/src/app/frontend/src
     command: npm run dev
 
   campus-backend:
     build: 
-      context: ./backend/
+      context: ./backend
       dockerfile: Dockerfile
     ports: 
       - 1337:1337
     volumes:
-      - ./backend/:/usr/src/app/backend/
+      - ./backend/src:/usr/src/app/backend/src
+      - ./backend/config:/usr/src/app/backend/config
     env_file:
       - ./backend/.env
     command: npm run develop

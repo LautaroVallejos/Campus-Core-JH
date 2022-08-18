@@ -1,6 +1,6 @@
-FROM node:18-alpine3.15
+FROM strapi/base
 
-WORKDIR /usr/src/app/backend
+WORKDIR /usr/src/app/backend/
 
 COPY ./package.json /usr/src/app/backend/
 COPY ./.env /usr/src/app/backend/
