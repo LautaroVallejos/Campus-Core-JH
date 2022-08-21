@@ -1,12 +1,13 @@
+require('dotenv').config();
 module.exports = ({ env }) => ({
   connection: {
     client: 'mysql',
     connection: {
-      host: env('DATABASE_HOST', 'campus-database-jh-test.cjieupmz3alc.us-east-2.rds.amazonaws.com'),
-      port: env.int('DATABASE_PORT', 3306),
-      database: env('DATABASE_NAME', 'JHCAMPUS'),
-      user: env('DATABASE_USERNAME', 'admin'),
-      password: env('DATABASE_PASSWORD', 'notSecureChangeMe2511'),
+      host: process.env.DATABASE_HOST,
+      port: process.env.DATABASE_PORT,
+      database: process.env.DATABASE_NAME,
+      user: process.env.DATABASE_USERNAME,
+      password: process.env.DATABASE_PASSWORD,
       ssl: env.bool('DATABASE_SSL', false),
     },
   },

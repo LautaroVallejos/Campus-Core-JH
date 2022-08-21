@@ -1,5 +1,10 @@
-module.exports = ({ env }) => ({
+require('dotenv').config();
+
+module.exports = () => ({
   auth: {
-    secret: env('ADMIN_JWT_SECRET', '234d002b5f2913e51c5152ea4ea4c8cb'),
+    secret: process.env.ADMIN_JWT_SECRET,
   },
+  apiToken: {
+    salt: process.env.API_TOKEN_SALT,
+  }
 });
